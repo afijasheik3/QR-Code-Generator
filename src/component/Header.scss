@@ -1,0 +1,31 @@
+$bg:black;
+$fc:white;
+
+@mixin adaptive-header
+{
+	font-size:5vmax;
+
+	@media(max-width:1023px)
+	{
+		font-size:4.5vmax;
+	}
+
+	@media(max-width:767px)
+	{
+		font-size:5vw;
+	}
+
+	@media(max-width:319px)
+	{
+		font-size:6vw;
+	}
+}
+
+header
+{
+	background-color:$bg;
+	color:$fc;
+	font-weight:800;
+	padding-left:1vmax;
+	@include adaptive-header;
+}
